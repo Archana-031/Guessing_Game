@@ -6,4 +6,4 @@ This project features a guessing game implemented in both a web-based environmen
 
 ->Web-Based Guessing Game
     
-->Console-Based Guessing Game
+->Console-Based Guessing Game(C)

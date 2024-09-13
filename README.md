@@ -7,3 +7,17 @@ This project features a guessing game implemented in both a web-based environmen
 ->Web-Based Guessing Game
     
 ->Console-Based Guessing Game(C)
+
+-> Web-Based Guessing Game
+
+Files
+
+index.html - The main HTML file for the game interface.
+
+styles.css - The CSS file for styling the game.
+
+script.js - The JavaScript file for game logic.
+
+-> Console-Based Guessing Game(C)
+
+Guessing_game_code(c) - The code in C language 

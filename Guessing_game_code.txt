@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+void guess_game_with_attempts_in_range_100();
+void guess_game_without_attempts_in_range_100();
+int main() {
+    int choice;
+    while(1){
+        printf("1. Play guess game with attempts\n2. Play guess game without attempts \n3. Stop Playing\n");
+        printf("Enter your choice: \n");
+        scanf("%d",&choice);
+        
+        switch(choice){
+            case 1:
+                guess_game_with_attempts_in_range_100();
+                break;
+            case 2:
+                guess_game_without_attempts_in_range_100();
+                break;
+            case 3:
+                printf("Stopped Playing!\n");
+                exit(0);
+                break;
+            default:
+                printf("Invalid choice! Please enter a valid option.\n");
+                break;
+        }
+    }
+        return 0;
+}
+    void guess_game_with_attempts_in_range_100(){
+            srand(time(NULL));
+            int random_number = rand() % 100;
+            int guess=-1;
+            int count=0;
+            printf("Guess the number if u can!!! (0-100)\n");
+            while(guess!=random_number || count<=5){
+            scanf("%d",&guess);
+            if(guess!= random_number){
+                count+=1;
+                if (count<=4){
+                    printf("Wrong guess! Please try again\n");
+                }
+                if(count<5){
+                    if( guess>=random_number){
+                        printf("The number is lower!\n");
+                    }else{
+                        printf("The number is higher!\n");
+                    }
+            }
+        }
+            if (guess==random_number){
+                printf("The number guessed is correct and is: %d\n",random_number);
+                return;
+        }
+            if (count>4){
+                printf("The no. of attempts are over! Please try again");
+                printf("\nThe number was: %d\n",random_number);
+                return;
+        }
+    }
+    }
+        void guess_game_without_attempts_in_range_100(){
+            srand(time(NULL));
+            int random_number = rand() % 100;
+            int guess=-1;
+            int count=0;
+            printf("Guess the number if u can!!! (0-100)\n");
+            while(guess!=random_number){
+            scanf("%d",&guess);
+                if(guess!= random_number){
+                    count+=1;
+                    printf("Wrong guess! Please try again\n");
+                        if( guess>=random_number){
+                            printf("The number is lower!\n");
+                        }else{
+                            printf("The number is higher!\n");
+                        }
+                }
+                if (guess==random_number){
+                    printf("The number guessed is correct and is: %d\n",random_number);
+                    printf("The number of attempts are %d\n",count);
+                    return;
+        }
+    }
+    }
